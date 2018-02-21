@@ -1,0 +1,25 @@
+.section--services {
+	@extend .section;
+	background-color: $bg-color-dark;
+}
+
+.header__title--services {
+	@extend .header__title;
+	color: $text-color-white;
+}
+
+.section__element--services {
+	text-align: center;
+	grid-column: span 3;
+}
+
+.services__icon {
+	width: 60px;
+	height: 60px;
+}
+
+.section__highlight--services {
+	@extend .section__highlight;
+	margin-top: 40px;
+	margin-bottom: 12px;
+}
