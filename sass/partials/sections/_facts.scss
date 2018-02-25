@@ -1,0 +1,14 @@
+.section--facts {
+	@extend .section;
+	background-color: $bg-color-dark;
+}
+
+.header__title--facts {
+	@extend .header__title;
+	color: $text-color-white;
+}
+
+.section__element--facts {
+	text-align: center;
+	grid-column: span 3;
+}

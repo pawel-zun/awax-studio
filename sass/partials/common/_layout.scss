@@ -21,8 +21,8 @@ body {
 .header__title {
 	font-size: 30px;
 	line-height: 30px;
-	font-weight: 700;
-	margin-bottom: 20px;
+	font-weight: 600;
+	margin-bottom: 15px;
 }
 
 .header__subtitle {
@@ -35,7 +35,7 @@ body {
 .section__content {
 	@extend .container;
 	display: grid;
-	grid-template-columns: repeat(12, auto);
+	grid-template-columns: repeat(12, 1fr);
 	grid-column-gap: 30px;
 }
 
@@ -52,6 +52,14 @@ body {
 	line-height: 21px;
 	font-weight: 300;
 	color: $text-color-light;
+}
+
+.section__footer {
+	@extend .container;
+	height: 75px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end
 }
 
 .container {

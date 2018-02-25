@@ -14,6 +14,9 @@ module.exports = function(grunt) {
 		},
 
 		autoprefixer: {
+			options: {
+				grid: true
+			},
 			target_file: {
 				src: 'style.css'
 			},

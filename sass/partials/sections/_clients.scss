@@ -1,0 +1,48 @@
+.clients__testimonial {
+  grid-column: 3 / span 8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clients__photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 27px;
+}
+
+.clients__name {
+  font-size: 24px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $text-color-black;
+  margin-bottom: 15px;
+}
+
+.clients__position {
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $text-color-light;
+  margin-bottom: 10px;
+}
+
+.clients__quote {
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 300;
+  color: $text-color-light;
+  text-align: center;
+  &::before {
+    content: '';
+    display: block;
+    width: 27px;
+    height: 20px;
+    background-image: url('assets/quotes.png');
+    position: relative;
+    left: calc(50% - 13.5px);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
