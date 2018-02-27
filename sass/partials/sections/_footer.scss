@@ -1,36 +1,64 @@
-footer {
-	display: flex;
-	flex-direction: column;
-	height: 110px;
+.section--footer {
+	@extend .section;
+	background-color: $bg-color-dark;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-top: 1px solid #cfcfcf;
+	border-bottom: 1px solid #cfcfcf;
 }
 
-.copyrights {
-	text-align: center;
-	margin-top: 10px; 
-	font-size: 14px;
-	font-family: $text-font-headline;
-	color: #555;
+.section__element--footer {
+	grid-column: span 4;
+}
+
+.section__element--footer:first-child {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .footer__social {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@extend .fa__container;
 }
 
-@media (min-width: 992px) {
-	footer {
-		display: block;
-		position: relative;
-		height: 90px;
-	}
-	.copyrights {
-		text-align: left;
-		margin-top: 0;
-		position: absolute;
-		top: calc(50% - 7px);
-	}
+.footer__copy {
+	font-size: 14px;
+	line-height: 25px;
+	color: $text-color-white;
+	text-transform: uppercase;
+	font-weight: 400;
+
 }
 
+.footer__note {
+	font-size: 12px;
+	line-height: 21px;
+	font-weight: 300;
+	color: $text-color-light;
+}
+
+.footer__newsletter {
+	background-color: $detail-color-dark;
+  border-radius: 2px;
+  padding: 35px 35px 45px;
+	text-align: center;
+}
+
+.newsletter__input {
+	@extend .contact__input;
+	text-align: center;
+	color: $text-color-subtitle;
+	max-width: 220px;
+	margin-bottom: 30px;
+	background-color: $detail-color-dark;
+}
+
+.bg1_copy_2 {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 1005px;
+  top: 7114px;
+  width: 350px;
+  height: 198px;
+  z-index: 62;
+}

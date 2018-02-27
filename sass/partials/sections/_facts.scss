@@ -11,4 +11,31 @@
 .section__element--facts {
 	text-align: center;
 	grid-column: span 3;
+	padding: 15px 20px 20px;
+}
+
+.facts__number {
+	font-size: 48px;
+	line-height: 28px;
+	font-weight: 700;
+	color: $detail-color;
+	&::after {
+		content: '';
+		width: 30px;
+		height: 3px;
+		background-color: $text-color-light;
+		display: block;
+		margin-top: 20px;
+		margin-bottom: 15px;
+		margin-left: calc(50% - 15px);
+	}
+}
+
+.section__highlight--facts {
+	@extend .section__highlight;
+	min-height: 60px;
+}
+
+.section__subtle--facts {
+	@extend .section__subtle;
 }

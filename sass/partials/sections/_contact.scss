@@ -1,26 +1,51 @@
-.contact {
-	background-color: $bg-color-dark;
-	background-image: url('assets/map-bg.png');
-	background-repeat: no-repeat;
-	background-position: right bottom;
-	h2 {
-		color: $text-color-white;
-	}
+.section__content--contact {
+  @extend .section__content;
+	grid-row-gap: 30px;
+}
+
+.section__element--contact:first-child {
+	grid-column: 4 / span 3;
+	grid-row: 1 / 2;
+}
+
+.section__element--contact:nth-child(2) {
+	grid-column: 7 / span 3;
+	grid-row: 1 / 2;
+}
+
+.section__element--contact:nth-child(3) {
+	grid-column: 4 / span 6;
+	grid-row: 2 / 3;
+}
+
+.section__element--contact:nth-child(4) {
+	grid-column: 4 / span 6;
+	grid-row: 3 / 4;
+}
+
+.section__element--contact:nth-child(5) {
+	grid-column: 4 / span 6;
+	grid-row: 4 / 5;
+	height: 65px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end
 }
 
 .contact__input {
+	font-family: 'Montserrat', sans-serif;
 	width: 100%;
-	font-size: 14px;
-	font-family: $text-font-regular;
+	font-size: 13px;
+	line-height: 25px;
 	color: $text-color-dark;
-	font-weight: 700;
-	border: 1px solid #ccc;
-  border-radius: 2px;
-  padding: 20px;
-  margin-bottom: 30px;
+	font-weight: 400;
+	background-color: transparent;
+	border: 0;
+	border-bottom: 2px solid $text-color-subtitle;
+  padding: 15px 0;
   &::placeholder {
-  	color: #bbb;
-		font-family: $text-font-headline;
+  	color: $text-color-subtitle;
+		font-weight: 300;
 		text-transform: uppercase;
   }
   &:focus {
@@ -32,5 +57,4 @@
 .contact__textarea {
 	@extend .contact__input;
 	resize: none;
-	height: 241px;
 }

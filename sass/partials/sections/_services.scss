@@ -21,5 +21,5 @@
 .section__highlight--services {
 	@extend .section__highlight;
 	margin-top: 40px;
-	margin-bottom: 12px;
+	min-height: 30px;
 }

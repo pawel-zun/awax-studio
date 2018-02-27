@@ -5,7 +5,6 @@
 // COMMON STYLES
 
 @import 'partials/common/reset';
-//@import 'partials/common/grid';
 @import 'partials/common/layout';
 @import 'partials/common/buttons';
 @import 'partials/common/fa';
@@ -23,7 +22,8 @@
 @import 'partials/sections/price';
 @import 'partials/sections/premium';
 @import 'partials/sections/facts';
-//@import 'partials/sections/portfolio';
-//@import 'partials/sections/contact';
-//@import 'partials/sections/footer';
+@import 'partials/sections/share';
+@import 'partials/sections/contact';
+@import 'partials/sections/address';
+@import 'partials/sections/footer';
 

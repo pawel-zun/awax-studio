@@ -2,7 +2,8 @@ button {
   border-radius: 20px;
   border: 0;
   background-color: $detail-color;
-  width: 194px;
+  width: 100%;
+  max-width: 194px;
   height: 45px;
   font-size: 12px;
   line-height: 1.5;

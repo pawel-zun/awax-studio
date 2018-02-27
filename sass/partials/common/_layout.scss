@@ -62,6 +62,12 @@ body {
 	align-items: flex-end
 }
 
+.aside {
+  background-color: $bg-color-white;
+	border-top: 1px solid #cfcfcf;
+	border-bottom: 1px solid #cfcfcf;
+}
+
 .container {
   width: 100%;
   padding-right: 30px;

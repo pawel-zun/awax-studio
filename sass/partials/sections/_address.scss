@@ -1,0 +1,32 @@
+.section-address {
+  @extend .section;
+  padding-top: 36px;
+  padding-bottom: 37px;
+  background-image: url('assets/Map.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.section__element--address {
+  grid-column: 1 / span 6;
+	background-color: $bg-color-white;
+  border-radius: 2px;
+  padding: 54px 40px;
+}
+
+.address__info {
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 300;
+  color: $text-color-light;
+  padding-bottom: 15px;
+  &:last-of-type {
+    padding-bottom: 0;
+  }
+  & .fa {
+    font-size: 18px;
+    margin-right: 18px;
+    background-color: $text-color-subtitle;
+    cursor: auto;
+  }
+}

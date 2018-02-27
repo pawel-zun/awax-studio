@@ -1,8 +1,6 @@
 .section--logos {
 	@extend .section;
-	background-color: $bg-color-white;
-	border-top: 2px solid #cfcfcf;
-	border-bottom: 2px solid #cfcfcf;
+  @extend .aside;
 	padding-top: 50px;
 	padding-bottom: 50px;
 }

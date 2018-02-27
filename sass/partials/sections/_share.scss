@@ -1,0 +1,58 @@
+.section--share {
+  @extend .aside;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.section__element--share {
+  grid-column: 3 / span 8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  color: $text-color-subtitle;
+}
+
+.share__message {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.share__decor {
+  width: 24px;
+  height: 25px;
+  display: block;
+  margin-right: 15px;
+}
+
+.share__social {
+  font-size: 10px;
+  line-height: 25px;
+  font-weight: 700;
+}
+
+.share__icon {
+  width: 85px;
+  display: inline-block;
+  & .fa {
+    margin-right: 5px;
+  }
+  & .fa-twitter {
+    background-color: #34c5f0;
+  }
+  & .fa-linkedin {
+    background-color: #127cb4;
+  }
+  & .fa-facebook {
+    background-color: #336297;
+  }
+  & .fa-google-plus {
+    background-color: #e74237;
+  }
+  & .fa-pinterest-p {
+    background-color: #b71c29;
+  }
+}
