@@ -4,7 +4,7 @@
 	justify-content: center;
 }
 
-.fa {
+.fa__icon {
 	color: $text-color-white;
 	background-color: $detail-color-light;
 	border-radius: 50%;
@@ -14,7 +14,8 @@
 	font-size: 14px;
 	line-height: 34px;
 	margin-right: 6px;
-	margin-bottom: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 	&:last-of-type {
 		margin-right: 0;
 	}
@@ -24,6 +25,7 @@
 	}
 }
 
-.fa--dark {
+.fa__icon--dark {
+	@extend .fa__icon;
 	background-color: $detail-color-dark;
 }

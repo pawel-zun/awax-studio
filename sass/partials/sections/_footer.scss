@@ -5,6 +5,7 @@
 	padding-bottom: 30px;
 	border-top: 1px solid #cfcfcf;
 	border-bottom: 1px solid #cfcfcf;
+	position: relative;
 }
 
 .section__element--footer {
@@ -51,14 +52,4 @@
 	max-width: 220px;
 	margin-bottom: 30px;
 	background-color: $detail-color-dark;
-}
-
-.bg1_copy_2 {
-  background-color: rgb(255, 255, 255);
-  position: absolute;
-  left: 1005px;
-  top: 7114px;
-  width: 350px;
-  height: 198px;
-  z-index: 62;
 }
