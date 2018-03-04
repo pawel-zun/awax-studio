@@ -71,10 +71,12 @@
   max-width: 255px;
   max-height: 165px;
   position: relative;
+  overflow: hidden;
   &:hover {
     cursor: pointer;
     .projects__info {
-      visibility: visible;
+      opacity: 1;
+      top: 0;
     }
   }
 }
@@ -90,17 +92,18 @@
 }
 
 .projects__info {
-  visibility: hidden;
+  opacity: 0;
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
+  top: 100%;
   left: 0;
   background-color: rgba(0, 0, 0, 0.75);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: opacity 1s, top 0.5s;
 }
 
 .projects__name {

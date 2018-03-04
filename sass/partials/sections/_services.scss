@@ -11,11 +11,13 @@
 .section__element--services {
 	text-align: center;
 	grid-column: span 3;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	position: relative;
 	&::after {
 		content: '';
 		display: block;
-		width: 2px;
+		width: 1px;
 		height: 100%;
 		background-color: $detail-color-light;
 		position: absolute;
