@@ -13,6 +13,12 @@
 		<nav class="masthead__navigation">
 			<div class="navigation__container">
 				<img src="assets/Logo.png" alt="Our Logo" title="AWAX studio!" class="navigation__logo">
+				<input id="navigation__burger" type="checkbox">
+				<label for="navigation__burger" class="navigation__burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</label>
 				<ul class="navigation__list">
 					<li class="list__item">
 						<a href="#" alt="" class="list__link">home</a>
@@ -75,7 +81,7 @@
 					purus. Nam porta erat id sapien consectetur. Fusce sed purus eros. Vivamus rhoncus, ipsum in tempus fermentum, orci leo
 					facilisis purus.
 				</p>
-				<button class="button">learn more</button>
+				<button class="button--about">learn more</button>
 			</div>
 			<div class="section__element--about">
 				<img src="assets/Video.jpg" alt="Click to play video" title="Our video" class="about__image">
@@ -522,21 +528,19 @@
 	</section>
 
 	<aside class="section--share">
-		<main class="section__content">
-			<div class="section__element--share">
-				<div class="share__message">
-					<img src="assets/Share.png" alt="" class="share__decor">
-					<p>tell about us:</p>
-				</div>
-				<div class="share__social">
-					<span class="share__icon"><i class="fa fa-twitter fa__icon" aria-hidden="true"></i> 152</span>
-					<span class="share__icon"><i class="fa fa-linkedin fa__icon" aria-hidden="true"></i> 31</span>
-					<span class="share__icon"><i class="fa fa-facebook fa__icon" aria-hidden="true"></i> 165</span>
-					<span class="share__icon"><i class="fa fa-google-plus fa__icon" aria-hidden="true"></i> 22</span>
-					<span class="share__icon"><i class="fa fa-pinterest-p fa__icon" aria-hidden="true"></i> 165</span>
-				</div>
+		<div class="section__content">
+			<div class="share__message">
+				<img src="assets/Share.png" alt="" class="share__decor">
+				<p>tell about us:</p>
 			</div>
-		</main>
+			<div class="share__social">
+				<span class="share__icon"><i class="fa fa-twitter fa__icon" aria-hidden="true"></i> 152</span>
+				<span class="share__icon"><i class="fa fa-linkedin fa__icon" aria-hidden="true"></i> 31</span>
+				<span class="share__icon"><i class="fa fa-facebook fa__icon" aria-hidden="true"></i> 165</span>
+				<span class="share__icon"><i class="fa fa-google-plus fa__icon" aria-hidden="true"></i> 22</span>
+				<span class="share__icon"><i class="fa fa-pinterest-p fa__icon" aria-hidden="true"></i> 165</span>
+			</div>
+		</div>
 	</aside>
 
 	<section id="contact" class="section">
@@ -600,7 +604,7 @@
 			<div class="section__element--footer">
 				<form class="footer__newsletter">
 					<input type="email" name="email" placeholder="Email to subscribe" class="newsletter__input" required>
-					<button class="button">subscribe</button>
+					<button class="button--newsletter">subscribe</button>
 				</form>
 			</div>
 		</div>

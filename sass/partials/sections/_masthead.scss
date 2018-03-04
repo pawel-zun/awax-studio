@@ -21,6 +21,7 @@
 	align-items: center;
 	justify-content: space-between;
 	height: 100%;
+	position: relative;
 }
 
 .navigation__list {
@@ -56,6 +57,122 @@
 	}
 }
 
+#navigation__burger {
+	display: none;
+	&:checked {
+		+ .navigation__burger {
+			span {
+				background-color: $detail-color;
+				opacity: 0;
+				top: 50%;
+			}
+			span:first-child {
+				opacity: 1;
+				transform: rotate(405deg);
+			}
+			span:last-child {
+				opacity: 1;
+				transform: rotate(-405deg);
+			}
+		}
+		~ .navigation__list {
+			display: flex;
+		}
+	}
+}
+
+.navigation__burger {
+	display: none;
+	position: relative;
+	height: 40px;
+	width: 40px;
+	span {
+		position: absolute;
+		width: 100%;
+		height: 4px;
+		top: calc(50% - 2px);
+		left: 0;
+		display: block;
+		background-color: $bg-color-white;
+		transition: .5s;
+	}
+	span:first-child {
+		top: 5px; 
+	}
+	span:last-child {
+		top: 31px; 
+	}
+	&:hover {
+		cursor: pointer;
+		span {
+			background-color: $detail-color;	
+		}
+	}
+}
+
+@include respond-to('medium') {
+	.navigation__container {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	.navigation__list {
+		position: absolute;
+		top: 100px;
+		left: 0;
+		display: none;
+		flex-direction: column;
+		justify-content: flex-start;
+		background-color: $bg-color-dark;
+		width: 100vw;
+		height: calc(100vh - 100px);
+		z-index: 100;
+	}
+
+	.list__item {
+		display: block;
+		font-size: 21px;
+		padding-top: 10px;
+		padding-bottom: 20px;
+		padding-left: 0;
+		padding-right: 0;
+		position: relative;
+	}	
+
+	.list__link {
+		display: inline-block;
+		&::after {
+			content: '';
+			display: block;
+			visibility: visible;
+			position: absolute;
+			left: -10%;
+			top: 40px;
+			height: 2px;
+			width: 120%;
+			background-color: $detail-color;
+		}
+	}
+	.navigation__burger {
+		display: block;
+	}
+}
+
+@include respond-to('small') {
+	.list__item {
+		display: block;
+		font-size: 18px;
+		padding-top: 5px;
+		padding-bottom: 15px;
+	}	
+
+	.list__link {
+		display: inline-block;
+		&::after {
+			top: 30px;
+		}
+	}
+}
+
 .jumbotron {
 	@extend .container;
 	height: calc(100% - 176px);
@@ -71,6 +188,14 @@
 	line-height: 69px;
 	font-weight: 700;
 	text-align: center;
+	@include respond-to('small') {
+		font-size: 50px;
+		line-height: 50px;
+	}
+	@include respond-to('extra-small') {
+		font-size: 30px;
+		line-height: 30px;
+	}
 }
 
 .jumbotron__title--decor{
@@ -83,6 +208,9 @@
 	line-height: 18px;
 	text-align: center;
 	margin: 30px auto 50px;
+	@include respond-to('extra-small') {
+		font-size: 14px;
+	}
 }
 
 .masthead__footer {

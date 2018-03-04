@@ -1,13 +1,30 @@
 .section__content--about {
 	@extend .section__content;
+	@include respond-to('medium') {
+		justify-items: center;
+	}
 }
 
 .section__element--about:first-of-type {
 	grid-column: 1 / span 7;
+	@include respond-to('medium') {
+		grid-row: 2 / 3;
+		grid-column: 3 / span 8;
+	}
+	@include respond-to('small') {
+		grid-column: 1 / span 12;
+	}
 }
 
 .section__element--about:nth-of-type(2) {
 	grid-column: 8 / span 5;
+	@include respond-to('medium') {
+		grid-row: 1 / 2;
+		grid-column: 3 / span 8;
+	}
+	@include respond-to('small') {
+		grid-column: 1 / span 12;
+	}
 }
 
 .about__text {
@@ -16,6 +33,10 @@
 	line-height: 25px;
 	color: $text-color-dark;
 	margin-bottom: 34px;
+	@include respond-to('medium') {
+		padding-top: 20px;
+		text-align: center;
+	}
 }
 
 .about__image {
@@ -24,5 +45,13 @@
 	box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.42);
 	&:hover {
 		cursor: pointer;
+	}
+}
+
+.button--about {
+	@extend .button;
+	@include respond-to('medium') {
+		margin-left: auto;
+		margin-right: auto;
 	}
 }

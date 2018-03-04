@@ -29,6 +29,20 @@
 			display: none;
 		}
 	}
+	@include respond-to('small') {
+		grid-column: span 6;
+		&:nth-of-type(2) {
+			&::after {
+				display: none;
+			}
+		}
+	}
+	@include respond-to('extra-small') {
+		grid-column: span 12;
+		&::after {
+			display: none;
+		}
+	}
 }
 
 .services__icon {

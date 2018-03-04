@@ -10,7 +10,8 @@
   text-align: center;
 	color: $text-color-white;
 	font-weight: 700;
-	text-transform: uppercase;
+  text-transform: uppercase;
+  display: block;
 	&:hover {
     cursor: pointer;
     background-color: $text-color-black;
@@ -44,6 +45,12 @@
   @extend .round;
   bottom: -32.5px;
   right: 80px;
+  @include respond-to('medium') {
+    right: 15px;
+  }
+  @include respond-to('small') {
+    display: none;
+  }
 }
 
 .round--up {

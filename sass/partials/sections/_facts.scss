@@ -12,6 +12,12 @@
 	text-align: center;
 	grid-column: span 3;
 	padding: 15px 20px 20px;
+	@include respond-to('small') {
+		grid-column: span 6;
+	}
+	@include respond-to('extra-small') {
+		grid-column: span 12;
+	}
 }
 
 .facts__number {

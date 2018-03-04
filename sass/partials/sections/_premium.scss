@@ -14,13 +14,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @include respond-to('small') {
+    display: none;
+  }
 }
 
 .section__element--premium:last-child {
   grid-column: 7 / span 5;
+  @include respond-to('small') {
+    grid-column: 3 / span 9;
+  }
 }
 
 .premium__image {
+  width: 100%;
   max-width: 388px;
 }
 

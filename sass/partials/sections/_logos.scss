@@ -10,4 +10,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	@include respond-to('medium') {
+		grid-column: span 4;
+	}
+	@include respond-to('extra-small') {
+		grid-column: span 6;
+	}
 }

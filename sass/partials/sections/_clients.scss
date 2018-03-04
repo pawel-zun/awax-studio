@@ -3,6 +3,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include respond-to('extra-small') {
+    grid-column: 1 / span 12;
+  }
 }
 
 .clients__photo {

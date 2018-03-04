@@ -5,6 +5,9 @@
   background-image: url('assets/Map.jpg');
   background-position: center center;
   background-size: cover;
+  @include respond-to('medium') {
+    padding-bottom: 47px;
+  }
 }
 
 .section__element--address {
@@ -12,6 +15,15 @@
 	background-color: $bg-color-white;
   border-radius: 2px;
   padding: 54px 40px;
+  @include respond-to('medium') {
+    grid-column: 1 / span 7;
+  }
+  @include respond-to('small') {
+    grid-column: 2 / span 10;
+  }
+  @include respond-to('extra-small') {
+    grid-column: 1 / span 12;
+  }
 }
 
 .address__info {
