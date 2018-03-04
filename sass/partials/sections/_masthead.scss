@@ -58,7 +58,7 @@
 
 .jumbotron {
 	@extend .container;
-	height: calc(100% - 100px);
+	height: calc(100% - 176px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -83,4 +83,13 @@
 	line-height: 18px;
 	text-align: center;
 	margin: 30px auto 50px;
+}
+
+.masthead__footer {
+	@extend .section__footer;
+}
+
+.pagination--masthead {
+	@extend .pagination;
+	padding-top: 20px;
 }

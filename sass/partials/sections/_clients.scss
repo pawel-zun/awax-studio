@@ -46,3 +46,8 @@
     margin-bottom: 20px;
   }
 }
+
+.section__footer--clients {
+  @extend .section__footer;
+  margin-top: 10px;
+}

@@ -61,6 +61,7 @@
 }
 
 .price__button {
+  @extend .button;
   max-width: 129px;
   background-color: $detail-color-dark;
   &:hover {

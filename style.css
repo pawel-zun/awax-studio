@@ -97,21 +97,22 @@ body {
   font-weight: 300;
   color: #7e7e7e; }
 
-.section__footer {
-  height: 75px;
+.section__footer, .masthead__footer, .section__footer--projects, .section__footer--team, .section__footer--clients {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
   -ms-flex-pack: center;
       justify-content: center;
-  -ms-flex-align: end;
-      align-items: flex-end; }
+  -ms-flex-align: center;
+      align-items: center; }
 
 .aside, .section--logos, .section--share {
   background-color: #fff;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf; }
 
-.container, .section__header, .section__content, .section__content--about, .section__content--projects, .section__content--premium, .section__content--contact, .section__footer, .navigation__container, .jumbotron, .projects__navigation {
+.container, .section__header, .section__content, .section__content--about, .section__content--projects, .section__content--premium, .section__content--contact, .section__footer, .masthead__footer, .section__footer--projects, .section__footer--team, .section__footer--clients, .navigation__container, .jumbotron, .projects__navigation {
   width: 100%;
   padding-right: 30px;
   padding-left: 30px;
@@ -119,22 +120,22 @@ body {
   margin-left: auto; }
 
 @media (min-width: 1200px) {
-  .container, .section__header, .section__content, .section__content--about, .section__content--projects, .section__content--premium, .section__content--contact, .section__footer, .navigation__container, .jumbotron, .projects__navigation {
+  .container, .section__header, .section__content, .section__content--about, .section__content--projects, .section__content--premium, .section__content--contact, .section__footer, .masthead__footer, .section__footer--projects, .section__footer--team, .section__footer--clients, .navigation__container, .jumbotron, .projects__navigation {
     max-width: 1170px; } }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  .container, .section__header, .section__content, .section__content--about, .section__content--projects, .section__content--premium, .section__content--contact, .section__footer, .navigation__container, .jumbotron, .projects__navigation {
+  .container, .section__header, .section__content, .section__content--about, .section__content--projects, .section__content--premium, .section__content--contact, .section__footer, .masthead__footer, .section__footer--projects, .section__footer--team, .section__footer--clients, .navigation__container, .jumbotron, .projects__navigation {
     max-width: 960px; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .container, .section__header, .section__content, .section__content--about, .section__content--projects, .section__content--premium, .section__content--contact, .section__footer, .navigation__container, .jumbotron, .projects__navigation {
+  .container, .section__header, .section__content, .section__content--about, .section__content--projects, .section__content--premium, .section__content--contact, .section__footer, .masthead__footer, .section__footer--projects, .section__footer--team, .section__footer--clients, .navigation__container, .jumbotron, .projects__navigation {
     max-width: 720px; } }
 
 @media (min-width: 576px) and (max-width: 767px) {
-  .container, .section__header, .section__content, .section__content--about, .section__content--projects, .section__content--premium, .section__content--contact, .section__footer, .navigation__container, .jumbotron, .projects__navigation {
+  .container, .section__header, .section__content, .section__content--about, .section__content--projects, .section__content--premium, .section__content--contact, .section__footer, .masthead__footer, .section__footer--projects, .section__footer--team, .section__footer--clients, .navigation__container, .jumbotron, .projects__navigation {
     max-width: 540px; } }
 
-button {
+.button, .price__button {
   border-radius: 20px;
   border: 0;
   background-color: #b88b58;
@@ -147,10 +148,10 @@ button {
   color: #fff;
   font-weight: 700;
   text-transform: uppercase; }
-  button:hover {
+  .button:hover, .price__button:hover {
     cursor: pointer;
     background-color: #000; }
-  button:focus {
+  .button:focus, .price__button:focus {
     outline: none; }
 
 .round, .round--call, .round--up {
@@ -210,6 +211,25 @@ button {
 .fa__icon--dark {
   background-color: #373737; }
 
+.pagination, .pagination--masthead {
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+.pagination__dot, .pagination__dot--active {
+  border: 2px solid #b88b58;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: transparent; }
+  .pagination__dot:hover, .pagination__dot--active:hover {
+    background-color: #b88b58;
+    cursor: pointer; }
+  .pagination__dot:focus, .pagination__dot--active:focus {
+    outline: none; }
+
+.pagination__dot--active {
+  background-color: #b88b58; }
+
 .masthead {
   width: 100%;
   height: 100vh;
@@ -265,7 +285,7 @@ button {
     background-color: #b88b58; }
 
 .jumbotron {
-  height: calc(100% - 100px);
+  height: calc(100% - 176px);
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -291,6 +311,9 @@ button {
   line-height: 18px;
   text-align: center;
   margin: 30px auto 50px; }
+
+.pagination--masthead {
+  padding-top: 20px; }
 
 .section__element--about:first-of-type {
   grid-column: 1 / span 7; }
@@ -320,7 +343,19 @@ button {
 
 .section__element--services {
   text-align: center;
-  grid-column: span 3; }
+  grid-column: span 3;
+  position: relative; }
+  .section__element--services::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 100%;
+    background-color: #bebebe;
+    position: absolute;
+    right: -14px;
+    top: 0; }
+  .section__element--services:last-of-type::after {
+    display: none; }
 
 .services__icon {
   width: 60px;
@@ -435,10 +470,14 @@ button {
   font-weight: 300;
   color: #fff; }
 
+.section__footer--projects {
+  margin-top: 30px; }
+
 .section--team {
   background-color: #000;
   background-image: url("assets/Bg image.jpg");
-  background-size: cover; }
+  background-size: cover;
+  padding-bottom: 0; }
 
 .header__title--team {
   color: #fff; }
@@ -479,6 +518,9 @@ button {
   line-height: 24px;
   font-weight: 400;
   color: #242424; }
+
+.section__footer--team {
+  margin-top: 10px; }
 
 .clients__testimonial {
   grid-column: 3 / span 8;
@@ -525,6 +567,9 @@ button {
     left: calc(50% - 13.5px);
     margin-top: 20px;
     margin-bottom: 20px; }
+
+.section__footer--clients {
+  margin-top: 10px; }
 
 .section--logos {
   padding-top: 50px;

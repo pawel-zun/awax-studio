@@ -1,0 +1,24 @@
+.pagination {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.pagination__dot {
+  border: 2px solid $detail-color;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  &:hover {
+    background-color: $detail-color;
+    cursor: pointer;
+  }
+  &:focus {
+  	outline: none;
+  }
+}
+
+.pagination__dot--active {
+  @extend .pagination__dot;
+  background-color: $detail-color;
+}

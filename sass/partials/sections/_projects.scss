@@ -118,3 +118,8 @@
 	font-weight: 300;
 	color: $text-color-white;
 }
+
+.section__footer--projects {
+  @extend .section__footer;
+  margin-top: 30px;
+}

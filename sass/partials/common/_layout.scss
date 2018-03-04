@@ -57,10 +57,10 @@ body {
 
 .section__footer {
 	@extend .container;
-	height: 75px;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	align-items: flex-end
+	align-items: center;
 }
 
 .aside {

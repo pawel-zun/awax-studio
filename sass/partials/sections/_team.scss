@@ -3,6 +3,7 @@
 	background-color: $bg-color-dark;
 	background-image: url('assets/Bg image.jpg');
 	background-size: cover;
+	padding-bottom: 0;
 }
 
 .header__title--team {
@@ -50,4 +51,9 @@
 
 .team__social {
 	@extend .fa__container;
+}
+
+.section__footer--team {
+	@extend .section__footer;
+	margin-top: 10px;
 }
