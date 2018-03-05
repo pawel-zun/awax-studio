@@ -7,11 +7,20 @@
 	color: $text-color-white;
 	text-transform: uppercase;
 	position: relative;
+	@include respond-to('medium') {
+		background-position: right center;
+	}
 }
 
 .masthead__navigation {
 	height: 100px;
 	background-color: $bg-color-dark;
+	@include respond-to('small') {
+		height: 80px;
+	}
+	@include respond-to('extra-small') {
+		height: 60px;
+	}
 }
 
 .navigation__container {
@@ -22,12 +31,39 @@
 	justify-content: space-between;
 	height: 100%;
 	position: relative;
+	@include respond-to('medium') {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
 }
 
 .navigation__list {
 	height: 100%;
 	display: flex;
 	align-items: center;
+	@include respond-to('medium') {
+		padding-bottom: 100px;
+		position: absolute;
+		top: 100px;
+		left: 0;
+		display: none;
+		flex-direction: column;
+		justify-content: space-around;
+		background-color: $bg-color-dark;
+		width: 100%;
+		height: calc(100vh - 100px);
+		z-index: 100;
+	}
+	@include respond-to('small') {
+		top: 80px;
+		height: calc(100vh - 80px);
+		padding-bottom: 50px;
+	}
+	@include respond-to('extra-small') {
+		top: 60px;
+		height: calc(100vh - 60px);
+		padding-bottom: 15px;
+	}	
 }
 
 .list__item {
@@ -39,6 +75,30 @@
 	&:hover .list__link::after {
 		visibility: visible;
 	}
+	@include respond-to('medium') {
+		font-size: 21px;
+		padding-top: 10px;
+		padding-bottom: 20px;
+		padding-left: 0;
+		padding-right: 0;
+		position: relative;
+	}
+	@include portrait('medium') {
+		font-size: 34px;
+	}
+	@include respond-to('small') {
+		font-size: 16px;
+		padding-top: 5px;
+		padding-bottom: 15px;
+	}
+	@include portrait('small') {
+		font-size: 34px;
+	}
+	@include respond-to('extra-small') {
+		font-size: 14px;
+		padding-top: 5px;
+		padding-bottom: 7px;
+	}	
 }	
 
 .list__link {
@@ -55,6 +115,40 @@
 		width: 100%;
 		background-color: $detail-color;
 	}
+	@include respond-to('medium') {
+		&::after {
+			content: '';
+			display: block;
+			visibility: visible;
+			position: absolute;
+			left: -10%;
+			top: 40px;
+			height: 2px;
+			width: 120%;
+			background-color: $detail-color;
+		}
+	}
+	@include portrait('medium') {
+		&::after {
+			top: 60px;
+		}
+	}
+	@include respond-to('small') {
+		&::after {
+			top: 25px;
+		}
+	}
+	@include portrait('small') {
+		&::after {
+			top: 60px;
+		}
+	}
+	@include respond-to('extra-small') {
+		&::after {
+			height: 1px;
+			top: 20px;
+		}
+	}	
 }
 
 #navigation__burger {
@@ -108,79 +202,25 @@
 			background-color: $detail-color;	
 		}
 	}
-}
-
-@include respond-to('medium') {
-	.navigation__container {
-		padding-left: 40px;
-		padding-right: 40px;
-	}
-	.navigation__list {
-		position: absolute;
-		top: 100px;
-		left: 0;
-		display: none;
-		flex-direction: column;
-		justify-content: flex-start;
-		background-color: $bg-color-dark;
-		width: 100vw;
-		height: calc(100vh - 100px);
-		z-index: 100;
-	}
-
-	.list__item {
+	@include respond-to('medium') {
 		display: block;
-		font-size: 21px;
-		padding-top: 10px;
-		padding-bottom: 20px;
-		padding-left: 0;
-		padding-right: 0;
-		position: relative;
-	}	
-
-	.list__link {
-		display: inline-block;
-		&::after {
-			content: '';
-			display: block;
-			visibility: visible;
-			position: absolute;
-			left: -10%;
-			top: 40px;
-			height: 2px;
-			width: 120%;
-			background-color: $detail-color;
-		}
-	}
-	.navigation__burger {
-		display: block;
-	}
-}
-
-@include respond-to('small') {
-	.list__item {
-		display: block;
-		font-size: 18px;
-		padding-top: 5px;
-		padding-bottom: 15px;
-	}	
-
-	.list__link {
-		display: inline-block;
-		&::after {
-			top: 30px;
-		}
 	}
 }
 
 .jumbotron {
 	@extend .container;
-	height: calc(100% - 176px);
+	height: calc(100% - 166px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 	text-align: center;
+	@include respond-to('small') {
+		height: calc(100% - 131px);
+	}
+	@include respond-to('extra-small') {
+		height: calc(100% - 111px);
+	}
 }
 
 .jumbotron__title {
@@ -191,6 +231,10 @@
 	@include respond-to('small') {
 		font-size: 50px;
 		line-height: 50px;
+	}
+	@include portrait('small') {
+		font-size: 72px;
+		line-height: 69px;	
 	}
 	@include respond-to('extra-small') {
 		font-size: 30px;
@@ -208,16 +252,42 @@
 	line-height: 18px;
 	text-align: center;
 	margin: 30px auto 50px;
+	@include respond-to('small') {
+		font-size: 18px;
+		margin: 20px auto 30px;
+	}
+	@include portrait('small') {
+		font-size: 24px;
+		margin: 30px auto 50px;
+	}
 	@include respond-to('extra-small') {
 		font-size: 14px;
+		margin: 20px auto 30px;
+	}
+}
+
+.button--masthead {
+	@extend .button;
+	@include respond-to('extra-small') {	
+		max-width: 154px;
+		height: 35px;
+		font-size: 11px;
+		font-weight: 600;
 	}
 }
 
 .masthead__footer {
 	@extend .section__footer;
+	@include respond-to('small') {		
+		padding-top: 20px;
+		padding-bottom: 0;
+	}
 }
 
 .pagination--masthead {
 	@extend .pagination;
-	padding-top: 20px;
+	padding-top: 5px;
+	@include respond-to('small') {
+		padding-bottom: 10px;
+	}
 }

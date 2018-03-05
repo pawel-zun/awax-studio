@@ -31,6 +31,9 @@
 	}
 	@include respond-to('small') {
 		grid-column: span 6;
+		&::after {
+			right: -8px;
+		}
 		&:nth-of-type(2) {
 			&::after {
 				display: none;

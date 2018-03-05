@@ -76,6 +76,7 @@
 	margin-bottom: 30px;
 	background-color: $detail-color-dark;
 	@include respond-to('small') {
+		width: 100%;
 		max-width: 320px;
 	}
 }

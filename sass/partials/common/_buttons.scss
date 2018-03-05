@@ -39,6 +39,10 @@
   &:focus {
   	outline: none;
   }
+  @include respond-to('small') {
+    width: 55px;
+    height: 55px;
+  }
 }
 
 .round--call {
@@ -49,7 +53,7 @@
     right: 15px;
   }
   @include respond-to('small') {
-    display: none;
+  bottom: -27.5px;
   }
 }
 
@@ -57,4 +61,7 @@
   @extend .round;
   left: 15px;
   top: -32.5px;
+  @include respond-to('small') {
+    top: -27.5px;
+  }
 }
